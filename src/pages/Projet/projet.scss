@@ -1,0 +1,48 @@
+@use 'src/styles/vars';
+
+.projet {
+  min-height: 100vh;
+  .project-container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding-top: 8%;
+    align-items: flex-start;
+    .project-description {
+      color: vars.$mainColor;
+      text-shadow: vars.$text-shadow;
+      text-align: right;
+      margin-right: 20px;
+      margin-top: 10px;
+      width: 50%;
+      .project-title {
+        font-size: 1.8em;
+        font-weight: 600;
+        margin-bottom: 25px;
+      }
+      .project-date {
+        font-style: italic;
+        margin-bottom: 25px;     
+       }
+      .project-content {
+        margin-bottom: 25px;
+      }
+
+    }
+
+    .project-image {
+      width: 50%;
+      img {
+        max-width: 450px;
+      }
+      button {
+        display: block;
+        background: vars.$mainColor;
+        border: none;
+        border-radius: 20px;
+        padding: 0.8em;
+        margin-top: 10px;
+      }
+    }
+  }
+}

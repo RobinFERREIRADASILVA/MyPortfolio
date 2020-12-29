@@ -1,11 +1,15 @@
+@use 'src/styles/vars';
+
 .header {
-  color: white;
+  color: #fff;
+  padding-top: 10px;
+  
   .header-title {
     padding-top: 12px;
   }
   .header-nav {
     height: 40px;
-    background-color: black;
+    background: transparent;
   }
   .navbar-list {
     height: 100%;
@@ -15,7 +19,10 @@
     position: relative;
   }
   .navbar-item {
-    margin-right: 10px;
+    margin-right: 80px;
+  }
+  .navbar-item:last-child {
+    margin: 0;
   }
   .navbar-button {
     display: none;
@@ -24,7 +31,7 @@
   @media screen and (max-width:500px){
     .navbar-list {
       flex-direction: column;
-      background-color: black;
+      background-color: transparent;
       height: 200px;
     }
     .navbar-item:nth-child(1) {
@@ -33,6 +40,7 @@
     }
     .navbar-item {
       width: 100%;
+      margin-right: 0;
       border-bottom: 1px solid white;
     }
     .navbar-item a{

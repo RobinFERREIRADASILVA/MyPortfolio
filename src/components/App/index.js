@@ -12,6 +12,8 @@ import Projet from 'src/pages/Projet';
 import NotFound from 'src/pages/NotFound';
 import Navbar from 'src/components/Navbar';
 
+import backgroundImage from 'src/assets/images/backgroundImage.jpg';
+
 // == Import
 import './styles.scss';
 
@@ -19,11 +21,14 @@ import './styles.scss';
 const App = () => {
   const [firstState, setFirstState] = useState('');
 
+  const backgroundStyle = {
+    backgroundImage: `url( ${backgroundImage} )`,
+  };
+
   return (
-    <div className="app">
+    <div className="app" style={backgroundStyle} >
       <Router>
         <Navbar />
-        <a>test savoir si bootstrap est un fdp</a>
         <Switch>
           <Route exact path="/">
             <Home />
@@ -40,8 +45,8 @@ const App = () => {
         </Switch>
       </Router>
     </div>
-);
-}
+  );
+};
 
 
 // == Export

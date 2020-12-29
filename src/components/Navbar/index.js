@@ -25,12 +25,11 @@ const Navbar = () => {
   return (
     <header className="header">
       <nav className="header-nav">
-        <h1 className="header-title">Robin FERREIRA DA SILVA</h1>
         {(openMenu || largeur > 500) && (
           <ul className="navbar-list">
             <li className="navbar-item"><NavLink exact to="/">Home</NavLink></li>
-            <li className="navbar-item"><NavLink exact to="/about">About</NavLink></li>
             <li className="navbar-item"><NavLink exact to="/projet">Projet</NavLink></li>
+            <li className="navbar-item"><NavLink exact to="/about">About</NavLink></li>
           </ul>
         )}
         <i className="fas fa-bars navbar-button" onClick={handleOpenMenu} />

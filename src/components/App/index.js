@@ -12,17 +12,13 @@ import Projet from 'src/pages/Projet';
 import NotFound from 'src/pages/NotFound';
 import Navbar from 'src/components/Navbar';
 
-import backgroundImage from 'src/assets/images/backgroundImage.jpg';
-
 // == Import
 import './styles.scss';
 
 // == Composant
 const App = () => {
-  const [firstState, setFirstState] = useState('');
-
   const backgroundStyle = {
-    backgroundImage: `url( ${backgroundImage} )`,
+    backgroundImage: 'url( https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg )',
   };
 
   return (

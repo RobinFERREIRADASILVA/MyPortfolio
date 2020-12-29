@@ -5,7 +5,7 @@ import './projet.scss';
 const Projet = () => (
   <div className="projet">
     <div className="project-container">
-      <div className="project-description">
+      <div className="project-description tracking-in-contract-bck-bottom">
         <h2 className="project-title">Cyclobster Photographie</h2>
         <p className="project-date">Décembre 2020</p>
         <p className="project-content">Site vitrine pour photographe, exposant ces clichés, et sa philosophie autour de la photo.

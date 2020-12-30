@@ -1,5 +1,5 @@
 // == Import npm
-import React, { useState } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -22,7 +22,7 @@ const App = () => {
   };
 
   return (
-    <div className="app" style={backgroundStyle} >
+    <div className="app" style={backgroundStyle}>
       <Router>
         <Navbar />
         <Switch>

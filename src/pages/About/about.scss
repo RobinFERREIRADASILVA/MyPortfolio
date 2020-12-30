@@ -1,0 +1,25 @@
+@use 'src/styles/vars';
+
+.about {
+  min-height: 92.5vh;
+  overflow: auto;
+  .about-content {
+    color: vars.$mainColor;
+    width: 40%;
+    padding: 2%;
+    margin-left: 4%;
+    margin-top: 1%;
+    line-height: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0px 7px 15px 6px #000;
+
+    h2 {
+      font-size: 1.5em;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    p {
+      margin-bottom: 0.8em;
+    }
+  }
+}

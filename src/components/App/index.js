@@ -14,11 +14,12 @@ import Navbar from 'src/components/Navbar';
 
 // == Import
 import './styles.scss';
+import background from 'src/assets/images/backgroundImage.jpg';
 
 // == Composant
 const App = () => {
   const backgroundStyle = {
-    backgroundImage: 'url( https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg )',
+    backgroundImage: `url( ${background} )`,
   };
 
   return (

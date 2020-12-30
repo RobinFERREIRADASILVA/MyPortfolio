@@ -1,13 +1,15 @@
 @use 'src/styles/vars';
 
-.projet {
+.projects {
   min-height: 92.5vh;
+  padding-bottom: 1.5em;
   .project-container {
     display: flex;
     width: 80%;
     margin: auto;
     padding-top: 8%;
     align-items: flex-start;
+    margin-bottom: 12px;
     .project-description {
       color: vars.$mainColor;
       text-shadow: vars.$text-shadow;

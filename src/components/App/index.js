@@ -8,7 +8,7 @@ import {
 
 import Home from 'src/pages/Home';
 import About from 'src/pages/About';
-import Projet from 'src/pages/Projet';
+import Projects from 'src/pages/Projects';
 import NotFound from 'src/pages/NotFound';
 import Navbar from 'src/components/Navbar';
 
@@ -32,8 +32,8 @@ const App = () => {
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/projet">
-            <Projet />
+          <Route exact path="/projects">
+            <Projects />
           </Route>
           <Route>
             <NotFound />

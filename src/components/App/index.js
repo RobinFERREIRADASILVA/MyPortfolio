@@ -10,6 +10,7 @@ import Home from 'src/pages/Home';
 import About from 'src/pages/About';
 import Projects from 'src/pages/Projects';
 import NotFound from 'src/pages/NotFound';
+import Contact from 'src/pages/Contact';
 import Navbar from 'src/components/Navbar';
 
 // == Import
@@ -35,6 +36,9 @@ const App = () => {
           </Route>
           <Route exact path="/projects">
             <Projects />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
           </Route>
           <Route>
             <NotFound />

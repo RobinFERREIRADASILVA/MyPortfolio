@@ -30,6 +30,7 @@ const Navbar = () => {
             <li className="navbar-item"><NavLink exact to="/">Home</NavLink></li>
             <li className="navbar-item"><NavLink exact to="/projects">Projets</NavLink></li>
             <li className="navbar-item"><NavLink exact to="/about">About</NavLink></li>
+            <li className="navbar-item"><NavLink exact to="/contact">Contact</NavLink></li>
           </ul>
         )}
         <i className="fas fa-bars navbar-button" onClick={handleOpenMenu} />

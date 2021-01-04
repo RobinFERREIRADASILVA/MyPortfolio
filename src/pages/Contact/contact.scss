@@ -1,0 +1,28 @@
+@use 'src/styles/vars';
+
+.contact {
+  min-height: 92.5vh;
+
+  .contact-container{
+    padding-left: 15%;
+    padding-top: 9%;
+    border-radius: 10px;
+    box-shadow: 0px 7px 15px 6px #000;
+    width: 35%;
+    padding: 1em;
+
+    h2 {
+      font-size: 1.8em;
+      padding-top: 0.5em;
+    }
+
+    p, h2 {
+      margin-bottom: 1em;
+    }
+    p i {
+      margin-right: 1em;
+      font-size: 1.5em;
+    }
+  }
+  
+}

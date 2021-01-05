@@ -1,18 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import dataProject from 'src/data/project';
 import Project from 'src/components/Project';
 
 import './projects.scss';
 
-const Projects = () => (
+const Projects = ({ projects }) => (
   <div className="projects">
-    { dataProject.map((project) => (
-      <Project
-        {...project}
-      />
-    )) }
+    <Project
+      {...project}
+    />
   </div>
 );
+
+Projects.propTypes = {
+  projects: PropTypes.array.isRequired,
+};
 
 export default Projects;

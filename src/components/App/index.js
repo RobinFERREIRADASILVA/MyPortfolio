@@ -17,6 +17,8 @@ import Navbar from 'src/components/Navbar';
 import './styles.scss';
 import background from 'src/assets/images/backgroundImage.jpg';
 
+import dataProject from 'src/data/project';
+
 // == Composant
 const App = () => {
   const backgroundStyle = {
@@ -34,8 +36,8 @@ const App = () => {
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/projects">
-            <Projects />
+          <Route exact path="/projet/:id">
+            <Projects projects={dataProject} />
           </Route>
           <Route exact path="/contact">
             <Contact />

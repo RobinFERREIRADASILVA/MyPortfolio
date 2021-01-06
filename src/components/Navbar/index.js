@@ -30,9 +30,9 @@ const Navbar = () => {
             <li className="navbar-item"><NavLink exact to="/">Home</NavLink></li>
             <li className="navbar-projet">Projets
               <ul className="navbar-projects">
-                <NavLink className="navbar-projects" exact to="project-1"><li>Projet 1</li></NavLink>
-                <NavLink className="navbar-projects" exact to="project-2"><li>Projet 2</li></NavLink>
-                <NavLink className="navbar-projects" exact to="project-3"><li>Projet 3</li></NavLink>
+                <NavLink className="navbar-projects" exact to="/project/1"><li>Projet 1</li></NavLink>
+                <NavLink className="navbar-projects" exact to="/project/2"><li>Projet 2</li></NavLink>
+                <NavLink className="navbar-projects" exact to="/project/3"><li>Projet 3</li></NavLink>
               </ul>
             </li>
             <li className="navbar-item"><NavLink exact to="/about">About</NavLink></li>

@@ -1,5 +1,6 @@
 const dataProject = [
   {
+    id: 1,
     name: 'Cyclobster Photographie',
     date: 'Novembre 2020',
     description: 'Site vitrine pour photographe, exposant ses clichés, et sa philosophie autour de la photo.',
@@ -8,6 +9,7 @@ const dataProject = [
     picture: 'https://www.laguilde.quebec/wp-content/uploads/2020/05/logo-placeholder.jpg',
   },
   {
+    id: 2,
     name: 'Annuaire Repository GitHub',
     date: 'Décembre 2020',
     description: 'SideProject challenge fun pour une recherche dans l\'API GitHub ',
@@ -16,6 +18,7 @@ const dataProject = [
     picture: 'https://www.laguilde.quebec/wp-content/uploads/2020/05/logo-placeholder.jpg',
   },
   {
+    id: 3,
     name: 'TodoApp',
     date: 'Décembre 2020',
     description: 'Challenge lancé sur le site Front-End Mentor',

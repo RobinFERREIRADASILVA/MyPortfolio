@@ -9,10 +9,8 @@ import { getProjectById } from 'src/utils/selector';
 import './projects.scss';
 
 const Projects = ({ projects }) => {
-  console.log(projects);
   const { id } = useParams();
   const project = getProjectById(id, projects);
-  console.log(project);
   return (
     <div className="projects">
       <Project

@@ -6,6 +6,7 @@ import {
   useLocation,
   useHistory,
 } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 import Home from 'src/pages/Home';
 import About from 'src/pages/About';
@@ -34,19 +35,24 @@ const App = () => {
       const url = `${window.location.origin}/`;
 
       const wheelRouter = (after, before) => {
-        if (event.wheelDeltaY < 0)
-        {
-          history.push(after);
+        if (event.wheelDeltaY < 0) {
+          setTimeout(() => {
+            history.push(after);
+          }, 500);
         }
         else if (event.wheelDeltaY > 0) {
-          history.push(before);
+          setTimeout(() => {
+            history.push(before);
+          }, 500);
         }
       };
 
       switch (window.location.href.toString()) {
         case url:
           if (event.wheelDelta < 0) {
-            history.push('project-1');
+            setTimeout(() => {
+              history.push('project-1');
+            }, 500);
           }
           break;
         case `${url}project-1`:
@@ -56,11 +62,16 @@ const App = () => {
           wheelRouter('project-3', 'project-1');
           break;
         case `${url}project-3`:
-          wheelRouter('contact', 'project-2');
+          wheelRouter('about', 'project-2');
+          break;
+        case `${url}about`:
+          wheelRouter('contact', 'project-3');
           break;
         case `${url}contact`:
           if (event.wheelDelta > 0) {
-            history.push('project-3');
+            setTimeout(() => {
+              history.push('project-3');
+            }, 500);
           }
           break;
         default:
@@ -72,26 +83,30 @@ const App = () => {
   }, [history]);
 
   return (
-    <div className="app" style={backgroundStyle}>
-      <Navbar />
-      <Switch location={location} key={location.pathname}>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/about">
-          <About />
-        </Route>
-        <Route exact path="/project-:id">
-          <Projects projects={dataProject} />
-        </Route>
-        <Route exact path="/contact">
-          <Contact />
-        </Route>
-        <Route>
-          <NotFound />
-        </Route>
-      </Switch>
-    </div>
+    <AnimatePresence>
+        <div className="app" style={backgroundStyle}>
+
+            <Navbar />
+            <Switch location={location} key={location.pathname}>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route exact path="/about">
+                <About />
+              </Route>
+              <Route exact path="/project-:id">
+                <Projects projects={dataProject} />
+              </Route>
+              <Route exact path="/contact">
+                <Contact />
+              </Route>
+              <Route>
+                <NotFound />
+              </Route>
+            </Switch>
+
+        </div>
+    </AnimatePresence>
   );
 };
 

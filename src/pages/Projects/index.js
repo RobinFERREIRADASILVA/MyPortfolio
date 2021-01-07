@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import Project from 'src/components/Project';
 
@@ -14,16 +14,14 @@ const Projects = ({ projects }) => {
   const project = getProjectById(id, projects);
 
   return (
-    <AnimatePresence>
-      <div
-        className="projects"
-      >
-        <Project
-          {...project}
-          key={project.id}
-        />
-      </div>
-    </AnimatePresence>
+    <div
+      className="projects"
+    >
+      <Project
+        {...project}
+        key={project.id}
+      />
+    </div>
   );
 };
 

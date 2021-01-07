@@ -84,28 +84,26 @@ const App = () => {
 
   return (
     <AnimatePresence>
-        <div className="app" style={backgroundStyle}>
-
-            <Navbar />
-            <Switch location={location} key={location.pathname}>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route exact path="/about">
-                <About />
-              </Route>
-              <Route exact path="/project-:id">
-                <Projects projects={dataProject} />
-              </Route>
-              <Route exact path="/contact">
-                <Contact />
-              </Route>
-              <Route>
-                <NotFound />
-              </Route>
-            </Switch>
-
-        </div>
+      <div className="app" style={backgroundStyle}>
+        <Navbar />
+        <Switch location={location} key={location.pathname}>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/project-:id">
+            <Projects projects={dataProject} />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
+          </Route>
+          <Route>
+            <NotFound />
+          </Route>
+        </Switch>
+      </div>
     </AnimatePresence>
   );
 };

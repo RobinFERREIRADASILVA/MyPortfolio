@@ -17,7 +17,7 @@ const Home = () => {
     exit: {
       opacity: 0,
       transition: { duration: 0.3 },
-      x: -400,
+      x: -100,
     },
   };
 
@@ -39,6 +39,6 @@ const Home = () => {
       </div>
     </motion.div>
   );
-}
+};
 
 export default Home;

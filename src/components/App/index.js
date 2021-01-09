@@ -70,7 +70,7 @@ const App = () => {
         case `${url}contact`:
           if (event.wheelDelta > 0) {
             setTimeout(() => {
-              history.push('project-3');
+              history.push('about');
             }, 500);
           }
           break;
@@ -83,31 +83,28 @@ const App = () => {
   }, [history]);
 
   return (
-    <AnimatePresence>
-      <div className="app" style={backgroundStyle}>
-        <Navbar />
-        <Switch location={location} key={location.pathname}>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/project-:id">
-            <Projects projects={dataProject} />
-          </Route>
-          <Route exact path="/contact">
-            <Contact />
-          </Route>
-          <Route>
-            <NotFound />
-          </Route>
-        </Switch>
-      </div>
-    </AnimatePresence>
+    <div className="app" style={backgroundStyle}>
+      <Navbar />
+      <Switch location={location} key={location.pathname}>
+        <Route exact path="/">
+          <Home key="home" />
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route exact path="/project-:id">
+          <Projects projects={dataProject} />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
+        </Route>
+        <Route>
+          <NotFound />
+        </Route>
+      </Switch>
+    </div>
   );
 };
-
 
 // == Export
 export default App;

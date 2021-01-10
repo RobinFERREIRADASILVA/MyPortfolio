@@ -1,25 +1,24 @@
 @use 'src/styles/vars';
-
-.home {
-  min-height: 92.5vh;
-  width: 80%;
-  .home-content {
-    padding-top: 12%;
-    padding-left: 20%;
-    line-height: 2em;
-    text-shadow: vars.$text-shadow;
-    color: vars.$secondColor;
-    font-size: 1.1em;
-
-    .home-title {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: vars.$mainColor;
-
-      .home-hello{
-        display: block;
-        margin-bottom: 25px;
+  
+  .home {
+    width: 80%;
+    .home-content {
+      padding-top: 15%;
+      padding-left: 20%;
+      line-height: 2em;
+      text-shadow: vars.$text-shadow;
+      color: vars.$secondColor;
+      font-size: 1.1em;
+  
+      .home-title {
+        font-size: 2em;
+        margin-bottom: 10px;
+        color: vars.$mainColor;
+  
+        .home-hello{
+          display: block;
+          margin-bottom: 25px;
+        }
       }
     }
   }
-}

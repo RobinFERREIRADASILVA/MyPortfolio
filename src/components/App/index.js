@@ -10,23 +10,17 @@ import { AnimatePresence } from 'framer-motion';
 
 import Home from 'src/pages/Home';
 import About from 'src/pages/About';
-import Projects from 'src/pages/Projects';
+import { Project1, Project2, Project3 } from 'src/pages/Projects';
 import NotFound from 'src/pages/NotFound';
 import Contact from 'src/pages/Contact';
 import Navbar from 'src/components/Navbar';
+import background from 'src/assets/images/backgroundImage.jpg';
 
 // == Import
 import './styles.scss';
-import background from 'src/assets/images/backgroundImage.jpg';
-
-import dataProject from 'src/data/project';
 
 // == Composant
 const App = () => {
-  const backgroundStyle = {
-    backgroundImage: `url( ${background} )`,
-  };
-
   const history = useHistory();
   const location = useLocation();
 
@@ -82,26 +76,23 @@ const App = () => {
     window.addEventListener("wheel", handleScrollToElement);
   }, [history]);
 
+  const backgroundStyle = {
+    backgroundImage: `url( ${background} )`,
+  };
+
   return (
     <div className="app" style={backgroundStyle}>
-      <Navbar />
-      <Switch location={location} key={location.pathname}>
-        <Route exact path="/">
-          <Home key="home" />
-        </Route>
-        <Route exact path="/about">
-          <About />
-        </Route>
-        <Route exact path="/project-:id">
-          <Projects projects={dataProject} />
-        </Route>
-        <Route exact path="/contact">
-          <Contact />
-        </Route>
-        <Route>
-          <NotFound />
-        </Route>
-      </Switch>
+    <Navbar />
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/project-1" component={Project1} />
+          <Route path="/project-2" component={Project2} />
+          <Route path="/project-3" component={Project3} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </AnimatePresence>
     </div>
   );
 };

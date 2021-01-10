@@ -1,32 +1,50 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { useParams } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import dataProject from 'src/data/project';
 
 import Project from 'src/components/Project';
 
-import { getProjectById } from 'src/utils/selector';
-
 import './projects.scss';
 
-const Projects = ({ projects }) => {
-  const { id } = useParams();
-  const project = getProjectById(id, projects);
+// const Projects = ({ projects }) => {
+//   const { id } = useParams();
+//   const project = getProjectById(id, projects);
 
-  return (
-    <div
-      className="projects"
-    >
-      <Project
-        {...project}
-        key={project.id}
-      />
-    </div>
-  );
-};
+//   return (
+//     <div
+//       className="projects"
+//     >
+//       <Project
+//         {...project}
+//         key={project.id}
+//       />
+//     </div>
+//   );
+// };
 
-Projects.propTypes = {
-  projects: PropTypes.array.isRequired,
-};
+export const Project1 = () => (
+  <div className="projects">
+    <Project
+      {...dataProject[0]}
+      key={dataProject[0].id}
+    />
 
-export default Projects;
+  </div>
+);
+export const Project2 = () => (
+  <div className="projects">
+    <Project
+      {...dataProject[1]}
+      key={dataProject[1].id}
+    />
+
+  </div>
+);
+export const Project3 = () => (
+  <div className="projects">
+    <Project
+      {...dataProject[2]}
+      key={dataProject[2].id}
+    />
+
+  </div>
+);

@@ -2,12 +2,16 @@
 
 .contact {
   min-height: 92.5vh;
+  color: vars.$mainColor;
   .contact-container{
-    padding-left: 15%;
-    padding-top: 9%;
-    border-radius: 10px;
-    box-shadow: 0px 7px 15px 6px #000;
-    width: 35%;
+    border-radius: 2px;
+    position: absolute;
+    background-color: black;
+    top: 170px;
+    left: 250px;
+    box-shadow: 0px 7px 5px 6px #000;
+    padding-top: 45%;
+    width: 40%;
     padding: 1em;
 
     h2 {

@@ -7,8 +7,8 @@ const Home = () => {
   const pageVariants = {
     initial: {
       opacity: 0,
-      transition: { duration: 1 },
-      x: 100,
+      transition: { duration: 0.7 },
+      x: '+100vw',
     },
     in: {
       opacity: 1,
@@ -16,10 +16,14 @@ const Home = () => {
     },
     exit: {
       opacity: 0,
-      transition: { duration: 0.3 },
-      x: -100,
+      transition: { duration: 0.7 },
+      x: '-100vw',
     },
   };
+
+  // const transition = {
+  //   transition: 'easeOut',
+  // };
 
   return (
     <motion.div

@@ -2,6 +2,7 @@ import React from 'react';
 import dataProject from 'src/data/project';
 
 import Project from 'src/components/Project';
+import ScrollButton from 'src/components/ScrollButton';
 
 import './projects.scss';
 
@@ -27,7 +28,7 @@ export const Project1 = () => (
       {...dataProject[0]}
       key={dataProject[0].id}
     />
-
+    <ScrollButton left="/" right="/project-2" />
   </div>
 );
 export const Project2 = () => (
@@ -36,7 +37,7 @@ export const Project2 = () => (
       {...dataProject[1]}
       key={dataProject[1].id}
     />
-
+    <ScrollButton left="/project-1" right="/project-3" />
   </div>
 );
 export const Project3 = () => (
@@ -45,6 +46,6 @@ export const Project3 = () => (
       {...dataProject[2]}
       key={dataProject[2].id}
     />
-
+    <ScrollButton left="/project-2" right="/about" />
   </div>
 );

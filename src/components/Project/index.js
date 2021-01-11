@@ -7,7 +7,7 @@ const Project = ({ name, date, description, teamDev, technos, picture }) => {
     initial: {
       opacity: 0,
       transition: { duration: 0.7 },
-      x: '50vw',
+      x: '70vw',
     },
     in: {
       opacity: 1,
@@ -15,7 +15,7 @@ const Project = ({ name, date, description, teamDev, technos, picture }) => {
     },
     exit: {
       opacity: 0,
-      transition: { duration: 0.7 },
+      transition: { duration: 0.5 },
       x: '-50vw',
     },
   };

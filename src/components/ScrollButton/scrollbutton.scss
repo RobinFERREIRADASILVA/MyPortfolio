@@ -1,0 +1,30 @@
+@use 'src/styles/vars';
+
+.scroll-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  color: vars.$mainColor;
+  transform: scaleY(0.6);
+  transition: 0.3s;
+  display: grid;
+  grid-template-columns: 20px 125px 20px;
+  grid-template-areas: 'left text right';
+  align-items: center;
+  justify-items: center;
+
+  &:hover {
+    transform: scaleY(1);
+  }
+  p {
+    margin: 0 1em;
+    text-align: center;
+    grid-area: text;
+  }
+  .left {
+    grid-area: left;
+  }
+  .right {
+    grid-area: right;
+  }
+}

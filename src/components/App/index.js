@@ -32,12 +32,12 @@ const App = () => {
         if (event.wheelDeltaY < 0) {
           setTimeout(() => {
             history.push(after);
-          }, 500);
+          }, 350);
         }
         else if (event.wheelDeltaY > 0) {
           setTimeout(() => {
             history.push(before);
-          }, 500);
+          }, 350);
         }
       };
 
@@ -46,7 +46,7 @@ const App = () => {
           if (event.wheelDelta < 0) {
             setTimeout(() => {
               history.push('project-1');
-            }, 500);
+            }, 350);
           }
           break;
         case `${url}project-1`:
@@ -65,7 +65,7 @@ const App = () => {
           if (event.wheelDelta > 0) {
             setTimeout(() => {
               history.push('about');
-            }, 500);
+            }, 350);
           }
           break;
         default:
@@ -79,10 +79,10 @@ const App = () => {
   const backgroundStyle = {
     backgroundImage: `url( ${background} )`,
   };
-
+  console.log(location);
   return (
     <div className="app" style={backgroundStyle}>
-    <Navbar />
+      <Navbar />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route path="/about" component={About} />

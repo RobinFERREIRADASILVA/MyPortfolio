@@ -8,14 +8,17 @@
       margin: auto;
       padding-top: 8%;
       align-items: flex-start;
+      height: 50%;
       margin-bottom: 12px;
       .project-description {
         color: vars.$mainColor;
-        text-shadow: vars.$text-shadow;
         text-align: right;
-        margin-right: 20px;
-        margin-top: 10px;
+        padding-right: 2em;
+        padding-top: 2em;
+        text-shadow: 0.1em 0.1em 0.2em black;
         width: 50%;
+        margin-bottom: 50.5px;
+        border-radius: 5px 0 0 5px;
         .project-title {
           font-size: 1.8em;
           font-weight: 600;
@@ -34,7 +37,7 @@
       .project-image {
         width: 50%;
         img {
-          max-width: 450px;
+          max-height: 350px;
         }
         button {
           display: block;

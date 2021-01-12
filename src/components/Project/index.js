@@ -50,7 +50,6 @@ Project.propTypes = {
   description: PropTypes.string.isRequired,
   teamDev: PropTypes.string.isRequired,
   technos: PropTypes.string.isRequired,
-  picture: PropTypes.string.isRequired,
 };
 
 export default Project;

@@ -79,7 +79,6 @@ const App = () => {
   const backgroundStyle = {
     backgroundImage: `url( ${background} )`,
   };
-  console.log(location);
   return (
     <div className="app" style={backgroundStyle}>
       <Navbar />

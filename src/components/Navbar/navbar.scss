@@ -24,7 +24,14 @@
   }
   .navbar-item {
     margin-right: 80px;
-    text-shadow: 0.2em 0.2em 0.5em black;
+    text-shadow: 0em 0em 0.2em black;
+    transition: 0.2s;
+
+    &:hover {
+      transition: 0.2s;
+      color: black;
+      text-shadow: 0em 0em 0.4em white;
+    }
   }
   .navbar-item:last-child {
     margin: 0;
@@ -34,12 +41,13 @@
   }
 
   .navbar-projet {
+    text-shadow: 0em 0em 0.2em black;
     cursor: pointer;
     margin-top: 80px;
     margin-right: 80px;
     transition: 0.5s;
 
-    &:hover .navbar-projects, {
+    &:hover .navbar-projects {
       visibility: visible;
       opacity: 1;
         li {
@@ -72,6 +80,22 @@
       flex-direction: column;
       background-color: transparent;
       height: 200px;
+
+      .navbar-projet {
+        margin: 0 ;
+        .projects {
+          height: 50px;
+          margin-top: 20px;
+          width: 10%;
+          margin: auto;
+          line-height: 50px;
+          display: block;
+        }
+
+        .navbar-projects {
+          display: none;
+        }
+        }
     }
     .navbar-item:nth-child(1) {
       margin-top: 50px;
@@ -81,14 +105,14 @@
       width: 100%;
       margin-right: 0;
       border-bottom: 1px solid white;
-    }
-    .navbar-item a{
-      height: 50px;
-      margin-top: 20px;
-      width: 10%;
-      margin: auto;
-      line-height: 50px;
-      display: block;
+      a{
+        height: 50px;
+        margin-top: 20px;
+        width: 10%;
+        margin: auto;
+        line-height: 50px;
+        display: block;
+      }
     }
 
     .navbar-button {

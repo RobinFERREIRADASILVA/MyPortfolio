@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-
+import classNames from 'classnames';
 import './navbar.scss';
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [largeur, setLargeur] = useState(window.innerWidth);
+  const [openProjects, setOpenProjects] = useState(false);
 
   const handleOpenMenu = () => {
     setOpenMenu(!openMenu);
+  };
+  const handleOpenProjects = () => {
+    setOpenProjects(!openProjects);
   };
 
   useEffect(() => {
@@ -42,8 +46,8 @@ const Navbar = () => {
         {(openMenu && largeur < 500) && (
           <ul className="navbar-list">
             <li className="navbar-item"><NavLink exact to="/">Home</NavLink></li>
-            <li className="navbar-item navbar-projet"><span className="projects">Projets</span>
-              <ul className="navbar-projects">
+            <li className="navbar-projet"><span className="projects" onClick={handleOpenProjects}>Projets</span>
+              <ul className={classNames('navbar-projects', {'projects--open' : openProjects})}>
                 <NavLink className="navbar-projects" exact to="/project-1"><li>Projet 1</li></NavLink>
                 <NavLink className="navbar-projects" exact to="/project-2"><li>Projet 2</li></NavLink>
                 <NavLink className="navbar-projects" exact to="/project-3"><li>Projet 3</li></NavLink>
